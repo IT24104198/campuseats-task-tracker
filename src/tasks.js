@@ -22,3 +22,24 @@ function addDueDate(task, dueDate) {
 console.log(`CampusEats has ${tasks.length} open tasks`);
 
 module.exports = { tasks, addDueDate };
+
+const VIP_DISCOUNT = 0.1;
+
+function calculateTotal(price, quantity, customerType) {
+  if (
+    typeof price !== "number" ||
+    typeof quantity !== "number" ||
+    price < 0 ||
+    quantity < 0
+  ) {
+    throw new Error("price and quantity must be valid non-negative numbers");
+  }
+
+  const subtotal = price * quantity;
+
+  return customerType === "vip"
+    ? subtotal * (1 - VIP_DISCOUNT)
+    : subtotal;
+}
+
+module.exports = { calculateTotal };
