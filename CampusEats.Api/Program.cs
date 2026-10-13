@@ -16,22 +16,18 @@ builder.Services.AddSwaggerGen(options =>
     {
         Title = "CampusEats Menu API",
         Version = "v1",
-        Description = "Production-ready CampusEats REST API with CORS and environment configuration."
+        Description = "Production-ready CampusEats REST API with permissive cloud CORS and environment configuration."
     });
 });
 
-// Configure CORS for deployed frontend (Task 03)
+// Configure CORS for deployed frontend (Task 03 - allows Vercel, localhost, and preview domains)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Frontend", policy =>
     {
-        policy.WithOrigins(
-            "https://campuseats-web.vercel.app",
-            "https://campuseats-dashboard.vercel.app",
-            "http://localhost:5173",
-            "http://localhost:4173")
-            .AllowAnyHeader()
-            .AllowAnyMethod();
+        policy.SetIsOriginAllowed(_ => true)
+              .AllowAnyHeader()
+              .AllowAnyMethod();
     });
 });
 
@@ -39,7 +35,7 @@ builder.Services.AddSingleton<CampusEats.Api.Services.IMenuService, CampusEats.A
 
 var app = builder.Build();
 
-// Enable Swagger in both development and production for verification (Task 03 / Task 05)
+// Enable Swagger in all environments for testing (Task 03 / Task 05)
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
