@@ -1,0 +1,40 @@
+@CampusEats.Api_HostAddress = http://localhost:5121
+
+### List supported categories
+GET {{CampusEats.Api_HostAddress}}/api/menu/categories
+Accept: application/json
+
+### List menu items
+GET {{CampusEats.Api_HostAddress}}/api/menu
+Accept: application/json
+
+### Get one menu item
+GET {{CampusEats.Api_HostAddress}}/api/menu/1
+Accept: application/json
+
+### Create a menu item
+POST {{CampusEats.Api_HostAddress}}/api/menu
+Content-Type: application/json
+
+{
+  "name": "Fruit Salad",
+  "price": 450,
+  "category": "Dessert",
+  "description": "Fresh seasonal fruit served chilled.",
+  "available": true
+}
+
+### Replace menu item 1
+PUT {{CampusEats.Api_HostAddress}}/api/menu/1
+Content-Type: application/json
+
+{
+  "name": "Chicken Kottu Roti",
+  "price": 900,
+  "category": "Mains",
+  "description": "Chopped roti stir-fried with chicken, egg, vegetables, and spices.",
+  "available": true
+}
+
+### Delete menu item 1
+DELETE {{CampusEats.Api_HostAddress}}/api/menu/1
