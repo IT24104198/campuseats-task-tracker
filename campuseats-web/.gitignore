@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+dist-ssr/
+
+# Environment files and secrets (NEVER commit to Git)
+.env
+.env.local
+.env.*.local
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Editor directories
+.vscode/
+.idea/
+.DS_Store

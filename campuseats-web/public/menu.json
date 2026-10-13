@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Kottu Roti",
+    "price": 750,
+    "category": "Mains",
+    "available": true,
+    "description": "Shredded roti stir-fried with egg, vegetables, and a blend of spices. A Sri Lankan street-food classic that hits different after a long lecture."
+  },
+  {
+    "id": 2,
+    "name": "Fried Rice",
+    "price": 850,
+    "category": "Mains",
+    "available": true,
+    "description": "Wok-tossed rice with mixed vegetables, egg, and soy sauce. Filling, fast, and perfect for a busy campus day."
+  },
+  {
+    "id": 3,
+    "name": "Veg Sub",
+    "price": 600,
+    "category": "Snacks",
+    "available": false,
+    "description": "Toasted sub roll loaded with fresh vegetables, cheese, and a tangy sauce. Back soon — check again tomorrow!"
+  },
+  {
+    "id": 4,
+    "name": "Watalappan",
+    "price": 350,
+    "category": "Dessert",
+    "available": true,
+    "description": "A traditional Sri Lankan coconut custard steamed with jaggery and cardamom. Sweet, creamy, and a little bit of home."
+  },
+  {
+    "id": 5,
+    "name": "Iced Milo",
+    "price": 300,
+    "category": "Drinks",
+    "available": true,
+    "description": "Cold Milo over ice — the campus canteen staple. Chocolatey, malty, and exactly what you need between classes."
+  }
+]
